@@ -14,3 +14,7 @@
 $router->get('/', function () use ($router) {
     return $router->app->version();
 });
+
+
+$router->post('/location/create', ['uses' => 'LocationController@storelocations']);
+$router->post('/event/create', ['uses' => 'EventController@storeevent']);
